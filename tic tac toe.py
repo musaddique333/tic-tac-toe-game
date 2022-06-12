@@ -88,6 +88,7 @@ print("\nEnter name of player 1")
 player1name = input()
 print("\nEnter name of player 2")
 player2name = input()
+game(*a)
 try:
     i = 0
     while True:
