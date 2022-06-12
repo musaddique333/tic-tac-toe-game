@@ -22,11 +22,13 @@ def player2(p2):
 
 def game(*g):
     screen_clear()
-    print(f"  {g[0]}  |  {g[1]}  |  {g[2]} ")
-    print("-----|-----|-----")
-    print(f"  {g[3]}  |  {g[4]}  |  {g[5]} ")
-    print("-----|-----|-----")
-    print(f"  {g[6]}  |  {g[7]}  |  {g[8]} ")
+    print("\n\n")
+    print("\t\t\t   TIC TAC TOE\n\n")
+    print(f"\t\t\t  {g[0]}  |  {g[1]}  |  {g[2]} ")
+    print("\t\t\t-----|-----|-----")
+    print(f"\t\t\t  {g[3]}  |  {g[4]}  |  {g[5]} ")
+    print("\t\t\t-----|-----|-----")
+    print(f"\t\t\t  {g[6]}  |  {g[7]}  |  {g[8]} ")
 
 
 def condition(p1, p2, *g):
@@ -98,6 +100,7 @@ try:
             if a[j] == "X" or a[j] == "O":
                 num += 1
         if num == 9:
+            game(*a)
             print("\n\tMatch draw!!!!")
             exit()
         else:
@@ -107,12 +110,15 @@ try:
         if i % 2 == 0:
             p11 = player1(player1name)
             while p11 > 9:
+                game(*a)
                 print("\nplease enter a number between 1 to 9")
                 p11 = player1(player1name)
             while p11 < 1:
+                game(*a)
                 print("\nplease enter a number between 1 to 9")
                 p11 = player1(player1name)
             while p11 > 9:
+                game(*a)
                 print("\nplease enter a number between 1 to 9")
                 p11 = player1(player1name)
             if a[p11 - 1] != "X" and a[p11 - 1] != "O":
@@ -124,18 +130,22 @@ try:
         else:
             p22 = player2(player2name)
             while p22 > 9:
+                game(*a)
                 print("\nplease enter a number between 1 to 9")
                 p22 = player2(player2name)
             while p22 < 1:
+                game(*a)
                 print("\nplease enter a number between 1 to 9")
                 p22 = player2(player2name)
             while p22 > 9:
+                game(*a)
                 print("\nplease enter a number between 1 to 9")
                 p22 = player2(player2name)
             if a[p22 - 1] != "X" and a[p22 - 1] != "O":
                 a[p22 - 1] = 'O'
                 game(*a)
             else:
+                game(*a)
                 print("\nAlready occupied")
                 i += 1
         i += 1
