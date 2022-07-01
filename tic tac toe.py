@@ -99,7 +99,7 @@ try:
         for j in range(9):
             if a[j] == "X" or a[j] == "O":
                 num += 1
-        if num == 9:
+        if num == 10:
             game(*a)
             print("\n\tMatch draw!!!!")
             exit()
